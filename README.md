@@ -84,7 +84,7 @@ JSON.parse(RestClient.delete 'http://localhost:3000/parks/1')
 
 RANDOM:
 ```
-JSON.parse(RestClient.get 'http://localhost:3000/parks/random=true')
+JSON.parse(RestClient.get 'http://localhost:3000/parks?random=true')
 ```
 
 Search by NAME:
