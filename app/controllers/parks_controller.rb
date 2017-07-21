@@ -51,7 +51,7 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.permit(:name, :description, :population, :mascot)
+    params.permit(:name, :state, :acres, :ownership)
   end
 
 end
