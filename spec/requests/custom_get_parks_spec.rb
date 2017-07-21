@@ -7,6 +7,12 @@ describe "get random parks route", :type => :request do
   it 'returns status code 200' do
     expect(response).to have_http_status(:success)
   end
+  # Not working in test mode
+  # it 'returns every park with matching name' do
+  #   binding.pry
+  #   expect(JSON.parse(response.body).size).to eq(1)
+  # end
+
 end
 
 describe "get parks by name search route", :type => :request do
