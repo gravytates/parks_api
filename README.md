@@ -65,11 +65,11 @@ JSON.parse(RestClient.get 'http://localhost:3000/parks')
 ```
 
 ```
-JSON.parse(RestClient.patch 'http://localhost:3000/parks/1', {name: 'updated', state: 'desc', acres: 2000, ownership: 'State'})
+JSON.parse(RestClient.patch 'http://localhost:3000/parks/1', {name: 'Foresty Place', state: 'Oregon', acres: 2000, ownership: 'National'})
 ```
 
 ```
-JSON.parse(RestClient.post 'http://localhost:3000/parks', {name: 'uni', state: 'desc', acres: 2000, ownership: 'State'})
+JSON.parse(RestClient.post 'http://localhost:3000/parks', {name: 'Fun Beach', state: 'Oregon', acres: 2000, ownership: 'National'})
 ```
 
 ```
