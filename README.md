@@ -107,6 +107,11 @@ Search by OWNERSHIP:
 JSON.parse(RestClient.get 'http://localhost:3000/parks?ownership=State')
 ```
 
+PAGINATE:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks?page=1')
+```
+
 ## Running tests
 
 This app uses RSpec and Shouldamatchers for testing.
