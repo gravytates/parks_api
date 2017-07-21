@@ -19,6 +19,7 @@ Scopes:
 - Filters parks by state
 - Filters parks by acres
 - Filters parks by ownership
+- Find a random park
 
 ## Database Seeding
 
@@ -60,22 +61,51 @@ You can test API calls from your own application via the Rails Console.  See sam
 
 ### University Calls
 
+GET:
 ```
 JSON.parse(RestClient.get 'http://localhost:3000/parks')
 ```
 
+
+PATCH:
 ```
 JSON.parse(RestClient.patch 'http://localhost:3000/parks/1', {name: 'Foresty Place', state: 'Oregon', acres: 2000, ownership: 'National'})
 ```
 
+POST:
 ```
 JSON.parse(RestClient.post 'http://localhost:3000/parks', {name: 'Fun Beach', state: 'Oregon', acres: 2000, ownership: 'National'})
 ```
 
+DELETE:
 ```
 JSON.parse(RestClient.delete 'http://localhost:3000/parks/1')
 ```
 
+RANDOM:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks/random=true')
+```
+
+Search by NAME:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks?name=test')
+```
+
+Search by STATE:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks?state=oregon')
+```
+
+Search by ACRES:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks?acres=1000')
+```
+
+Search by OWNERSHIP:
+```
+JSON.parse(RestClient.get 'http://localhost:3000/parks?ownership=State')
+```
 
 ## Running tests
 
