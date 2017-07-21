@@ -17,6 +17,9 @@ class ParksController < ApplicationController
       @parks = Park.search_by_ownership(ownership)
     elsif params[:page]
       @parks = Park.paginate(page: params[:page], per_page: 10)
+    elsif params[:random]
+      id = Park.random_id
+      @parks = Park.random_park(id)
     else
       @parks = Park.all
     end
