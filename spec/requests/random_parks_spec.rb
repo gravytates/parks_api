@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-describe "get all parks route", :type => :request do
+describe "get random parks route", :type => :request do
   let!(:parks) { FactoryGirl.create_list(:park, 20)}
 
-  before { get '/parks'}
+   get '/parks?random=true'
 
-  it 'returns all parks' do
-    expect(JSON.parse(response.body).size).to eq(20)
+  it 'returns random park' do
+    expect(JSON.parse(response.body).size).to eq(1)
   end
 
   it 'returns status code 200' do
